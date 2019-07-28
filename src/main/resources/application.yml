@@ -1,0 +1,45 @@
+spring:
+  thymeleaf:
+    cache: false
+    servlet:
+      content-type: text/html
+    enabled: true
+    encoding: UTF-8
+    mode: HTML5
+    prefix: classpath:/templates/
+    suffix: .html
+  # druid
+  datasource:
+     url: jdbc:mysql://localhost:3306/miaosha?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2B8&amp
+     username: root
+     password: 123
+     type: com.alibaba.druid.pool.DruidDataSource
+     filters: stat
+     maxActive: 2
+     initialSize: 1
+     maxWait: 60000
+     minIdle: 1
+     timeBetweenEvictionRunsMillis: 60000
+     minEvictableIdleTimeMillis: 300000
+     validationQuery: select 'x'
+     testWhileIdle: true
+     testOnBorrow: false
+     testOnReturn: false
+     poolPreparedStatements: true
+     maxOpenPreparedStatements: 20
+     driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis:
+  type-aliases-package: com.imooc.miaosha.domain
+  configuration:
+     map-underscore-to-camel-case: true
+     default-fetch-size: 100
+     default-statement-timeout: 3000
+  mapperLocations: classpath:com/imooc/miaosha/dao/*.xml
+#redis
+redis:
+   host: 192.168.152.132
+   port: 6379
+   timeout: 3
+   poolMaxTotal: 10
+   poolMaxIdle: 10
+   poolMaxWait: 3
