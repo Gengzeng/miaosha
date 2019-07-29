@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
+import javax.validation.Valid;
 
 @Slf4j
 @Controller
@@ -25,7 +26,7 @@ public class LoginController {
 
     @PostMapping("do_login")
     @ResponseBody
-    public Result<Boolean> doLogin(HttpServletResponse response,LoginVo loginVo){
+    public Result<Boolean> doLogin(HttpServletResponse response,@Valid LoginVo loginVo){
         //log.info("登录信息：{}",loginVo);
 
         miaoshaUserService.login(response,loginVo);
