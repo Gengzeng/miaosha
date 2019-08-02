@@ -1,11 +1,18 @@
 package com.imooc.miaosha.controller;
 
+import com.imooc.miaosha.rabbitmq.MQSender;
+import com.imooc.miaosha.rabbitmq.MiaoshaMessage;
+import com.imooc.miaosha.redis.GoodsKey;
+import com.imooc.miaosha.redis.MiaoshaKey;
+import com.imooc.miaosha.redis.OrderKey;
 import com.imooc.miaosha.result.Result;
+import com.sun.org.apache.bcel.internal.classfile.Code;
+import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.util.CollectionUtils;
+import org.springframework.web.bind.annotation.*;
 
 import com.imooc.miaosha.domain.MiaoshaOrder;
 import com.imooc.miaosha.domain.MiaoshaUser;
@@ -17,11 +24,13 @@ import com.imooc.miaosha.service.MiaoshaService;
 import com.imooc.miaosha.service.MiaoshaUserService;
 import com.imooc.miaosha.service.OrderService;
 import com.imooc.miaosha.vo.GoodsVo;
-import org.springframework.web.bind.annotation.ResponseBody;
 
-@Controller
+import java.util.HashMap;
+import java.util.List;
+
+@RestController
 @RequestMapping("/miaosha")
-public class MiaoshaController {
+public class MiaoshaController implements InitializingBean {
 
 	@Autowired
 	MiaoshaUserService userService;
@@ -37,6 +46,29 @@ public class MiaoshaController {
 	
 	@Autowired
 	MiaoshaService miaoshaService;
+
+	@Autowired
+	MQSender sender;
+
+	//内存标记
+	private HashMap<Long, Boolean> localOverMap =  new HashMap<Long, Boolean>();
+	@Override
+	/**
+	 * 系统初始化时执行
+	 */
+	public void afterPropertiesSet() throws Exception {
+
+		//查询出商品 做预减操作，把数据库的库存查出放入Redis中
+		List<GoodsVo> goodsVoList = goodsService.listGoodsVo();
+        if (CollectionUtils.isEmpty(goodsVoList)){
+        	return;
+		}
+        for (GoodsVo good : goodsVoList){
+        	//放入redis
+			localOverMap.put(good.getId(),false);
+			redisService.set(GoodsKey.getMiaoshaGoodsStock,""+good.getId(),good.getStockCount());
+		}
+	}
 	
 //    @RequestMapping("/do_miaosha")
 //    public String list(Model model,MiaoshaUser user,
@@ -65,29 +97,87 @@ public class MiaoshaController {
 //        return "order_detail";
 //    }
 
-	@RequestMapping("/do_miaosha")
-	@ResponseBody
-	public Result<OrderInfo> list(MiaoshaUser user,
+	@PostMapping("do_miaosha")
+	public Result<Integer> list(MiaoshaUser user,
 					   @RequestParam("goodsId")long goodsId) {
 		if(user == null) {
 			return Result.error(CodeMsg.SESSION_ERROR);
 		}
-		//判断库存
-		GoodsVo goods = goodsService.getGoodsVoByGoodsId(goodsId);//10个商品，req1 req2
-		int stock = goods.getStockCount();
-		if(stock <= 0) {
+		//内存标记，减少redis访问
+		boolean over = localOverMap.get(goodsId);
+		if(over) {
 			return Result.error(CodeMsg.MIAO_SHA_OVER);
 		}
-		//判断是否已经秒杀到了
-		MiaoshaOrder order = orderService.getMiaoshaOrderByUserIdGoodsId(user.getId(), goodsId);
-		if(order != null) {
+
+		//减redis中的库存
+		Long stock = redisService.decr(GoodsKey.getMiaoshaGoodsStock, "" + goodsId);
+		if (stock < 0){
+			//减空了
+			localOverMap.put(goodsId,true);
+			return Result.error(CodeMsg.MIAO_SHA_OVER);
+		}
+        //判断是否已经秒杀到了
+		MiaoshaOrder order = orderService.getMiaoshaOrderByUserIdGoodsId(user.getId(),goodsId);
+		if (order != null){
 			return Result.error(CodeMsg.REPEATE_MIAOSHA);
 		}
-		//减库存 下订单 写入秒杀订单
-		OrderInfo orderInfo = miaoshaService.miaosha(user, goods);
-		if (orderInfo == null){
-			return Result.error(CodeMsg.MIAO_SHA_OVER);
-		}
-		return Result.success(orderInfo);
+		//发送消息给队列 入队操作
+		MiaoshaMessage mm  = new MiaoshaMessage();
+
+		mm.setGoodsId(goodsId);
+		mm.setUser(user);
+		sender.sendMiaoshaMessage(mm);
+		return Result.success(0);
+
+
+//		//判断库存
+//		GoodsVo goods = goodsService.getGoodsVoByGoodsId(goodsId);//10个商品，req1 req2
+//		int stock = goods.getStockCount();
+//		if(stock <= 0) {
+//			return Result.error(CodeMsg.MIAO_SHA_OVER);
+//		}
+//		//判断是否已经秒杀到了
+//		MiaoshaOrder order = orderService.getMiaoshaOrderByUserIdGoodsId(user.getId(), goodsId);
+//		if(order != null) {
+//			return Result.error(CodeMsg.REPEATE_MIAOSHA);
+//		}
+//		//减库存 下订单 写入秒杀订单
+//		OrderInfo orderInfo = miaoshaService.miaosha(user, goods);
+//		if (orderInfo == null){
+//			return Result.error(CodeMsg.MIAO_SHA_OVER);
+//		}
+//		return Result.success(orderInfo);
 	}
+	/**
+	 * orderId：成功
+	 * -1：秒杀失败
+	 * 0： 排队中
+	 * */
+	@GetMapping("result")
+	public Result<Long> miaoshaResult(Model model,MiaoshaUser user,
+									  @RequestParam("goodsId")long goodsId) {
+		model.addAttribute("user", user);
+		if(user == null) {
+			return Result.error(CodeMsg.SESSION_ERROR);
+		}
+		long result  =miaoshaService.getMiaoshaResult(user.getId(), goodsId);
+		return Result.success(result);
+	}
+
+	@RequestMapping(value="/reset", method=RequestMethod.GET)
+	@ResponseBody
+	public Result<Boolean> reset(Model model) {
+		List<GoodsVo> goodsList = goodsService.listGoodsVo();
+		for(GoodsVo goods : goodsList) {
+			goods.setStockCount(10);
+			redisService.set(GoodsKey.getMiaoshaGoodsStock, ""+goods.getId(), 10);
+			localOverMap.put(goods.getId(), false);
+		}
+		redisService.delete(OrderKey.getMiaoshaOrderByUidGid);
+		redisService.delete(MiaoshaKey.isGoodsOver);
+		miaoshaService.reset(goodsList);
+		return Result.success(true);
+	}
+
+
 }

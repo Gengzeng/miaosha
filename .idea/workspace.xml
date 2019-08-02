@@ -2,52 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1ee5b3b-6c9e-43ac-91a3-d30907af3d57" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/controller/OrderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/redis/GoodsKey.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/vo/GoodsDetailVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/vo/OrderDetailVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/goods_detail.htm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/order_detail.htm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/imooc/miaosha/controller/OrderController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/imooc/miaosha/dao/MiaoshaUserDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/imooc/miaosha/redis/GoodsKey.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/imooc/miaosha/vo/GoodsDetailVo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/imooc/miaosha/vo/OrderDetailVo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/goods_detail.htm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/order_detail.htm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/MiaoshaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/MiaoshaApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/controller/GoodsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/controller/GoodsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/controller/MiaoshaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/controller/MiaoshaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/dao/MiaoshaUserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/dao/MiaoshaUserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/dao/GoodsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/dao/GoodsDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/dao/OrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/dao/OrderDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/redis/MiaoshaUserKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/redis/MiaoshaUserKey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/redis/OrderKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/redis/OrderKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/redis/GoodsKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/redis/GoodsKey.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/redis/RedisService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/redis/RedisService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/result/CodeMsg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/result/CodeMsg.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/service/GoodsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/service/GoodsService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/service/MiaoshaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/service/MiaoshaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/service/MiaoshaUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/service/MiaoshaUserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/service/OrderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/goods_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/goods_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/miaosha/MiaoshaApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imooc/miaosha/MiaoshaApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/miaosha/controller/GoodsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imooc/miaosha/controller/GoodsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/goods_detail.htm" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/goods_detail.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/order_detail.htm" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/order_detail.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/miaosha/controller/MiaoshaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imooc/miaosha/controller/MiaoshaController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/miaosha/dao/GoodsDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imooc/miaosha/dao/GoodsDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/miaosha/dao/MiaoshaUserMapper.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/miaosha/dao/OrderDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imooc/miaosha/dao/OrderDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/miaosha/redis/MiaoshaUserKey.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imooc/miaosha/redis/MiaoshaUserKey.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/miaosha/redis/OrderKey.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imooc/miaosha/redis/OrderKey.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/miaosha/redis/GoodsKey.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imooc/miaosha/redis/GoodsKey.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/miaosha/redis/RedisService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imooc/miaosha/redis/RedisService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/miaosha/result/CodeMsg.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imooc/miaosha/result/CodeMsg.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/miaosha/service/GoodsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imooc/miaosha/service/GoodsService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/miaosha/service/MiaoshaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imooc/miaosha/service/MiaoshaService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/miaosha/service/MiaoshaUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imooc/miaosha/service/MiaoshaUserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/miaosha/service/OrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imooc/miaosha/service/OrderService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/goods_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/goods_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/goods_detail.htm" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/goods_detail.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/order_detail.htm" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/order_detail.htm" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -60,14 +38,42 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/controller/MiaoshaController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="729">
-              <caret line="88" column="55" selection-start-line="88" selection-start-column="55" selection-end-line="88" selection-end-column="55" />
+            <state relative-caret-position="278">
+              <caret line="129" column="33" lean-forward="true" selection-start-line="123" selection-start-column="8" selection-end-line="129" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1512#1527#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/rabbitmq/MQConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="37" column="5" lean-forward="true" selection-start-line="34" selection-start-column="4" selection-end-line="37" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/rabbitmq/MQSender.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="23" selection-start-line="10" selection-end-line="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/rabbitmq/MQReceiver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="16" selection-start-line="16" selection-end-line="52" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -75,87 +81,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1159">
-              <caret line="61" selection-start-line="60" selection-start-column="21" selection-end-line="61" />
+            <state relative-caret-position="-287">
+              <caret line="52" column="14" lean-forward="true" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/controller/OrderController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="43" column="42" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/dao/GoodsDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="21" column="87" selection-start-line="21" selection-start-column="87" selection-end-line="21" selection-end-column="87" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/service/GoodsService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#491#492#0" expanded="true" />
-                <element signature="e#542#543#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/result/CodeMsg.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/service/OrderService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
-              <folding>
-                <element signature="e#952#953#0" expanded="true" />
-                <element signature="e#996#997#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/dao/OrderDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/redis/OrderKey.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/vo/OrderDetailVo.java">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -174,8 +103,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/utils/MD5Util.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/utils/ValidatorUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/resutl/Result.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/validator/IsMobileValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/domain/MiaoshaUser.java" />
@@ -194,7 +121,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/utils/SpringContextUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/utils/WebConfig.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/utils/DBproperties.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/utils/YmlConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/utils/YmlConfigUtil.java" />
@@ -206,25 +132,28 @@
         <option value="D:/Program Files/baiduyunpan/BaiduNetdiskDownload/project/y2gwfn/miaosha_4/pom.xml" />
         <option value="D:/Program Files/baiduyunpan/BaiduNetdiskDownload/project/y2gwfn/miaosha_4/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/result/CodeMsg.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/service/OrderService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/dao/GoodsDao.java" />
         <option value="D:/Program Files/baiduyunpan/BaiduNetdiskDownload/project/y2gwfn/miaosha_4/src/main/java/com/imooc/miaosha/dao/GoodsDao.java" />
         <option value="D:/Program Files/baiduyunpan/BaiduNetdiskDownload/project/y2gwfn/miaosha_4/src/main/java/com/imooc/miaosha/service/GoodsService.java" />
         <option value="D:/Program Files/baiduyunpan/BaiduNetdiskDownload/project/y2gwfn/miaosha_4/src/main/java/com/imooc/miaosha/service/MiaoshaService.java" />
         <option value="D:/Program Files/baiduyunpan/BaiduNetdiskDownload/project/y2gwfn/miaosha_4/src/main/java/com/imooc/miaosha/controller/MiaoshaController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/MiaoshaApplication.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/redis/GoodsKey.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/dao/MiaoshaUserDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/service/MiaoshaUserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/vo/GoodsDetailVo.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/goods_list.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/goods_detail.htm" />
         <option value="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/controller/GoodsController.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/redis/RedisService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/redis/GoodsKey.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/rabbitmq/MQConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/goods_detail.htm" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/service/MiaoshaService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/dao/GoodsDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/dao/OrderDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/service/GoodsService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/service/MiaoshaService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/service/OrderService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/controller/MiaoshaController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
       </list>
     </option>
   </component>
@@ -385,6 +314,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="miaosha" type="462c0819:PsiDirectoryNode" />
+              <item name="rabbitmq" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miaosha" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miaosha" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="miaosha" type="462c0819:PsiDirectoryNode" />
               <item name="redis" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -472,7 +410,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1564673470236" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1564756624119" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -484,14 +422,19 @@
       <recent name="com.imooc.miaosha.redis" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\projects\IdeaProjects\miaosha\src\main\java\com\imooc\miaosha\redis" />
+      <recent name="D:\projects\IdeaProjects\miaosha\src\main\resources\static" />
+      <recent name="D:\projects\IdeaProjects\miaosha\src\main\java\com\imooc\miaosha\rabbitmq" />
       <recent name="D:\projects\IdeaProjects\miaosha\src\main\java\com\imooc\miaosha\result" />
       <recent name="D:\projects\IdeaProjects\miaosha\src\main\java\com\imooc\miaosha\dao" />
-      <recent name="D:\projects\IdeaProjects\miaosha\src\main\java\com\imooc\miaosha\redis" />
-      <recent name="D:\projects\IdeaProjects\miaosha\src\main\java\com\imooc\miaosha\service" />
-      <recent name="D:\projects\IdeaProjects\miaosha\src\main\java\com\imooc\miaosha\vo" />
     </key>
   </component>
   <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
     <option name="ruleStates">
       <list>
         <RuleState>
@@ -526,13 +469,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MainApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="miaosha (1)" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.imooc.miaosha.MainApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -581,16 +517,15 @@
       <workItem from="1564487256195" duration="8690000" />
       <workItem from="1564546231339" duration="11787000" />
       <workItem from="1564633206112" duration="13447000" />
-      <workItem from="1564725511170" duration="1108000" />
+      <workItem from="1564725511170" duration="12444000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77232000" />
+    <option name="totallyTimeSpent" value="88568000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18900804" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -600,6 +535,7 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Run Dashboard" visible="true" weight="0.25070822" />
       <window_info anchor="bottom" id="Messages" order="0" weight="0.3286119" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
@@ -665,50 +601,39 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/controller/MiaoshaController.java</url>
+          <line>112</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/controller/MiaoshaController.java</url>
+          <line>68</line>
+          <properties />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/controller/MiaoshaController.java</url>
+          <line>129</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/controller/MiaoshaController.java</url>
+          <line>100</line>
+          <properties class="com.imooc.miaosha.controller.MiaoshaController" method="list">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/dao/UserDao.java" />
-    <entry file="file://D:/Program Files/baiduyunpan/BaiduNetdiskDownload/project/y2gwfn/miaosha_4/src/main/java/com/imooc/miaosha/MainApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Program Files/baiduyunpan/BaiduNetdiskDownload/project/y2gwfn/miaosha_4/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="817">
-          <caret line="43" column="23" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/4.3.12.RELEASE/spring-tx-4.3.12.RELEASE.jar!/org/springframework/transaction/annotation/Transactional.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/exception/GlobalExceptionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.23/tomcat-embed-core-8.5.23.jar!/org/apache/catalina/core/ApplicationFilterChain.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="117" selection-start-line="117" selection-end-line="117" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.23/tomcat-embed-core-8.5.23.jar!/org/apache/coyote/AbstractProtocol.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="750" selection-start-line="750" selection-end-line="750" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Program Files/baiduyunpan/BaiduNetdiskDownload/project/y2gwfn/miaosha_4/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
@@ -831,13 +756,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/redis/GoodsKey.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/redis/MiaoshaUserKey.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -849,13 +767,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/redis/RedisService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-209">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -901,22 +812,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/goods_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/target/classes/static/js/common.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/goods_detail.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="117" column="28" selection-start-line="117" selection-start-column="28" selection-end-line="117" selection-end-column="28" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/common.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -942,46 +839,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/service/MiaoshaService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="24" column="15" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/service/GoodsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#491#492#0" expanded="true" />
-            <element signature="e#542#543#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/service/OrderService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
-          <folding>
-            <element signature="e#952#953#0" expanded="true" />
-            <element signature="e#996#997#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/dao/OrderDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/redis/OrderKey.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -999,34 +856,152 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/redis/MiaoshaKey.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="77" column="55" lean-forward="true" selection-start-line="77" selection-start-column="55" selection-end-line="77" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/rabbitmq/MiaoshaMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/goods_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/goods_detail.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-182">
+          <caret line="156" column="23" selection-start-line="156" selection-start-column="23" selection-end-line="156" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/redis/GoodsKey.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="9" column="65" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/redis/RedisService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-836">
+          <caret line="76" column="5" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/dao/GoodsDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="21" column="87" selection-start-line="21" selection-start-column="87" selection-end-line="21" selection-end-column="87" />
+        <state relative-caret-position="304">
+          <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/dao/OrderDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/service/GoodsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#491#492#0" expanded="true" />
+            <element signature="e#542#543#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/service/OrderService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="59" column="32" selection-start-line="59" selection-start-column="32" selection-end-line="59" selection-end-column="32" />
+          <folding>
+            <element signature="e#952#953#0" expanded="true" />
+            <element signature="e#996#997#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/service/MiaoshaService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/controller/OrderController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="43" column="42" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
+        <state relative-caret-position="378">
+          <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1159">
-          <caret line="61" selection-start-line="60" selection-start-column="21" selection-end-line="61" />
+        <state relative-caret-position="-287">
+          <caret line="52" column="14" lean-forward="true" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/controller/MiaoshaController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="729">
-          <caret line="88" column="55" selection-start-line="88" selection-start-column="55" selection-end-line="88" selection-end-column="55" />
+        <state relative-caret-position="278">
+          <caret line="129" column="33" lean-forward="true" selection-start-line="123" selection-start-column="8" selection-end-line="129" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1512#1527#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/rabbitmq/MQConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="37" column="5" lean-forward="true" selection-start-line="34" selection-start-column="4" selection-end-line="37" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/rabbitmq/MQSender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="23" selection-start-line="10" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/rabbitmq/MQReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="16" selection-start-line="16" selection-end-line="52" selection-end-column="9" />
         </state>
       </provider>
     </entry>
