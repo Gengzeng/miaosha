@@ -1,5 +1,6 @@
 package com.imooc.miaosha.controller;
 
+import com.imooc.miaosha.result.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,6 +17,7 @@ import com.imooc.miaosha.service.MiaoshaService;
 import com.imooc.miaosha.service.MiaoshaUserService;
 import com.imooc.miaosha.service.OrderService;
 import com.imooc.miaosha.vo.GoodsVo;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @RequestMapping("/miaosha")
@@ -36,30 +38,56 @@ public class MiaoshaController {
 	@Autowired
 	MiaoshaService miaoshaService;
 	
-    @RequestMapping("/do_miaosha")
-    public String list(Model model,MiaoshaUser user,
-    		@RequestParam("goodsId")long goodsId) {
-    	model.addAttribute("user", user);
-    	if(user == null) {
-    		return "login";
-    	}
-    	//判断库存
-     	GoodsVo goods = goodsService.getGoodsVoByGoodsId(goodsId);
-    	int stock = goods.getStockCount();
-    	if(stock <= 0) {
-    		model.addAttribute("errmsg", CodeMsg.MIAO_SHA_OVER.getMsg());
-    		return "miaosha_fail";
-    	}
-    	//判断是否已经秒杀到了
-    	MiaoshaOrder order = orderService.getMiaoshaOrderByUserIdGoodsId(user.getId(), goodsId);
-    	if(order != null) {
-    		model.addAttribute("errmsg", CodeMsg.REPEATE_MIAOSHA.getMsg());
-    		return "miaosha_fail";
-    	}
-    	//减库存 下订单 写入秒杀订单
-    	OrderInfo orderInfo = miaoshaService.miaosha(user, goods);
-    	model.addAttribute("orderInfo", orderInfo);
-    	model.addAttribute("goods", goods);
-        return "order_detail";
-    }
+//    @RequestMapping("/do_miaosha")
+//    public String list(Model model,MiaoshaUser user,
+//    		@RequestParam("goodsId")long goodsId) {
+//    	model.addAttribute("user", user);
+//    	if(user == null) {
+//    		return "login";
+//    	}
+//    	//判断库存
+//     	GoodsVo goods = goodsService.getGoodsVoByGoodsId(goodsId);
+//    	int stock = goods.getStockCount();
+//    	if(stock <= 0) {
+//    		model.addAttribute("errmsg", CodeMsg.MIAO_SHA_OVER.getMsg());
+//    		return "miaosha_fail";
+//    	}
+//    	//判断是否已经秒杀到了
+//    	MiaoshaOrder order = orderService.getMiaoshaOrderByUserIdGoodsId(user.getId(), goodsId);
+//    	if(order != null) {
+//    		model.addAttribute("errmsg", CodeMsg.REPEATE_MIAOSHA.getMsg());
+//    		return "miaosha_fail";
+//    	}
+//    	//减库存 下订单 写入秒杀订单
+//    	OrderInfo orderInfo = miaoshaService.miaosha(user, goods);
+//    	model.addAttribute("orderInfo", orderInfo);
+//    	model.addAttribute("goods", goods);
+//        return "order_detail";
+//    }
+
+	@RequestMapping("/do_miaosha")
+	@ResponseBody
+	public Result<OrderInfo> list(MiaoshaUser user,
+					   @RequestParam("goodsId")long goodsId) {
+		if(user == null) {
+			return Result.error(CodeMsg.SESSION_ERROR);
+		}
+		//判断库存
+		GoodsVo goods = goodsService.getGoodsVoByGoodsId(goodsId);//10个商品，req1 req2
+		int stock = goods.getStockCount();
+		if(stock <= 0) {
+			return Result.error(CodeMsg.MIAO_SHA_OVER);
+		}
+		//判断是否已经秒杀到了
+		MiaoshaOrder order = orderService.getMiaoshaOrderByUserIdGoodsId(user.getId(), goodsId);
+		if(order != null) {
+			return Result.error(CodeMsg.REPEATE_MIAOSHA);
+		}
+		//减库存 下订单 写入秒杀订单
+		OrderInfo orderInfo = miaoshaService.miaosha(user, goods);
+		if (orderInfo == null){
+			return Result.error(CodeMsg.MIAO_SHA_OVER);
+		}
+		return Result.success(orderInfo);
+	}
 }

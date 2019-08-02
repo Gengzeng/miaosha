@@ -20,9 +20,12 @@ public class MiaoshaService {
 	@Transactional
 	public OrderInfo miaosha(MiaoshaUser user, GoodsVo goods) {
 		//减库存 下订单 写入秒杀订单
-		goodsService.reduceStock(goods);
+		int count = goodsService.reduceStock(goods);
+		if (count > 0){
+		return 	orderService.createOrder(user, goods);
+		}
 		//order_info maiosha_order
-		return orderService.createOrder(user, goods);
+		return null;
 	}
 	
 }

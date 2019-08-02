@@ -28,6 +28,15 @@ spring:
      poolPreparedStatements: true
      maxOpenPreparedStatements: 20
      driver-class-name: com.mysql.cj.jdbc.Driver
+  resources:
+    add-mappings: true
+    cache-period: 3600
+    chain:
+      cache: true
+      enabled: true
+      gzipped: true
+      html-application-cache: true
+    static-locations: classpath:/static/
 mybatis:
   type-aliases-package: com.imooc.miaosha.domain
   configuration:
@@ -43,6 +52,7 @@ redis:
    poolMaxTotal: 5000
    poolMaxIdle: 500
    poolMaxWait: 500
+
 #logging:
 #  level:
 #    com:
