@@ -1,5 +1,6 @@
 package com.imooc.miaosha.controller;
 
+import com.imooc.miaosha.access.AccessLimit;
 import com.imooc.miaosha.rabbitmq.MQSender;
 import com.imooc.miaosha.rabbitmq.MiaoshaMessage;
 import com.imooc.miaosha.redis.GoodsKey;
@@ -25,6 +26,11 @@ import com.imooc.miaosha.service.MiaoshaUserService;
 import com.imooc.miaosha.service.OrderService;
 import com.imooc.miaosha.vo.GoodsVo;
 
+import javax.imageio.ImageIO;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.awt.image.BufferedImage;
+import java.io.OutputStream;
 import java.util.HashMap;
 import java.util.List;
 
@@ -97,11 +103,16 @@ public class MiaoshaController implements InitializingBean {
 //        return "order_detail";
 //    }
 
-	@PostMapping("do_miaosha")
+	@PostMapping("/{path}/do_miaosha")
 	public Result<Integer> list(MiaoshaUser user,
-					   @RequestParam("goodsId")long goodsId) {
+					   @RequestParam("goodsId")long goodsId,@PathVariable("path")String path) {
 		if(user == null) {
 			return Result.error(CodeMsg.SESSION_ERROR);
+		}
+        //验证path
+		boolean check = miaoshaService.checkPath(user,goodsId,path);
+		if (!check){
+			return Result.error(CodeMsg.REQUEST_ILLEGAL);
 		}
 		//内存标记，减少redis访问
 		boolean over = localOverMap.get(goodsId);
@@ -177,6 +188,43 @@ public class MiaoshaController implements InitializingBean {
 		redisService.delete(MiaoshaKey.isGoodsOver);
 		miaoshaService.reset(goodsList);
 		return Result.success(true);
+	}
+	@AccessLimit(seconds=5, maxCount=5, needLogin=true)
+	@GetMapping("/path")
+	@ResponseBody
+	public Result<String> getMiaoshaPath(HttpServletRequest request, MiaoshaUser user,
+										 @RequestParam("goodsId")long goodsId,
+										 @RequestParam(value="verifyCode", defaultValue="0")int verifyCode
+	) {
+		if(user == null) {
+			return Result.error(CodeMsg.SESSION_ERROR);
+		}
+		boolean check = miaoshaService.checkVerifyCode(user, goodsId, verifyCode);
+		if(!check) {
+			return Result.error(CodeMsg.REQUEST_ILLEGAL);
+		}
+		String path  =miaoshaService.createMiaoshaPath(user, goodsId);
+		return Result.success(path);
+	}
+
+	@GetMapping(value="/verifyCode")
+	@ResponseBody
+	public Result<String> getMiaoshaVerifyCod(HttpServletResponse response, MiaoshaUser user,
+											  @RequestParam("goodsId")long goodsId) {
+		if(user == null) {
+			return Result.error(CodeMsg.SESSION_ERROR);
+		}
+		try {
+			BufferedImage image  = miaoshaService.createVerifyCode(user, goodsId);
+			OutputStream out = response.getOutputStream();
+			ImageIO.write(image, "JPEG", out);
+			out.flush();
+			out.close();
+			return null;
+		}catch(Exception e) {
+			e.printStackTrace();
+			return Result.error(CodeMsg.MIAOSHA_FAIL);
+		}
 	}
 
 
